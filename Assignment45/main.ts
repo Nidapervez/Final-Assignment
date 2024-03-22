@@ -1,13 +1,13 @@
 //Function Declaration
-function carInfo(manufacturer, model, ...options) {
-    let car = {
+function carInfo(manufacturer: string, model: string, ...options: [string, any][]) {
+    let car: { [key: string]: any } = {
         manufacturer: manufacturer,
         model: model
     };
-//for loop for iteration
-    for (let i = 0; i < options.length; i += 2) {
-        let key = options[i];
-        let value = options[i + 1];
+
+    // for loop for iteration
+    for (let i = 0; i < options.length; i++) {
+        let [key, value] = options[i];
         car[key] = value;
     }
 
@@ -15,7 +15,7 @@ function carInfo(manufacturer, model, ...options) {
 }
 
 // Call the function
-let myCar = carInfo("Hilux", "mehraaan", "color", "yellow", "Texture","Smooth");
+let myCar = carInfo("Hilux", "Alto", ["color", "pink"], ["year", 2025]);
 
-// Print the object 
+// Print the object
 console.log(myCar);
