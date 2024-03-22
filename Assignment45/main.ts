@@ -4,7 +4,6 @@ function carInfo(manufacturer, model, ...options) {
         model: model
     };
 
-    // Process additional options
     for (let i = 0; i < options.length; i += 2) {
         let key = options[i];
         let value = options[i + 1];
@@ -14,8 +13,8 @@ function carInfo(manufacturer, model, ...options) {
     return car;
 }
 
-// Call the function with required information and additional name-value pairs
-let myCar = carInfo("Toyota", "Camry", "color", "blue", "year", 2022);
+// Call the function
+let myCar = carInfo("Hilux", "mehraaan", "color", "yellow", "year", 1990);
 
-// Print the object returned to ensure all the information was stored correctly
+// Print the object 
 console.log(myCar);
