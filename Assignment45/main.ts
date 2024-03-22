@@ -15,7 +15,7 @@ function carInfo(manufacturer: string, model: string, ...options: [string, any][
 }
 
 // Call the function
-let myCar = carInfo("Hilux", "Alto", ["color", "pink"], ["year", 2025]);
+let myCar = carInfo("Suzuki", "Alto", ["color", "pink"], ["year", 2025]);
 
 // Print the object
 console.log(myCar);
